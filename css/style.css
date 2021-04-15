@@ -1,0 +1,507 @@
+
+
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: "bebasneue";
+	scroll-behavior: smooth;
+
+}
+
+body {
+	
+}
+
+#container{ /*preload images*/
+  background: url('../images/mainbg1.jpg') no-repeat -9999px -9999px;
+  background: url('../images/mainbg1.jpg') no-repeat -9999px -9999px,
+	url('../images/mainbg2.jpg') no-repeat -9999px -9999px,
+	url('../images/mainbg3.jpg') no-repeat -9999px -9999px;
+	position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 600px;
+    min-width: 1300px;
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////NAVIGATION BAR/////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+
+
+#nav-bar {
+	position: absolute;
+	top: 10px;
+	z-index: 1;
+	background-color: transparent;
+	text-align: center;
+	font-size: 26px;
+	font-weight: bolder;
+	padding: 0.75em 0;
+	width: 100%;
+	transition: all 0.2s, top 0s;
+	
+	
+}
+#nav-bar.nav-change {
+	position: fixed;
+	top: 0px;
+	background-color: #222222;
+}
+
+
+
+.nav-link {
+	color: lightpink;
+	text-decoration: none;
+	margin: 10px;
+	transition: all 0.2s;
+}
+
+.nav-link:hover {
+	color: #aa1948;
+}
+
+.active-link {
+	color: #aa1948;
+}
+
+.nav-rest {
+	right: 10px;
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////SECTION BACKGROUNDS////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+#home { animation: homeshow 12s linear infinite;}
+#about { background-image: url('../images/backg03.jpg'); }
+#creators { background-image: url('../images/backg05.jpg'); }
+#portfolio { background-image: url('../images/backg02.jpg'); }
+#clients { background-image: url('../images/backg05.jpg'); }
+#services { background-image: url('../images/backg05.jpg');}
+#contact { background-image: url('../images/backg01.jpg');}
+
+@keyframes homeshow
+{
+	0% {background-image: url('../images/mainbg1.jpg');}
+	25% {background-image: url('../images/mainbg1.jpg');}
+	33.33% {background-image: url('../images/mainbg2.jpg');}
+	58.33% {background-image: url('../images/mainbg2.jpg');}
+	66.66% {background-image: url('../images/mainbg3.jpg');}
+	91.66% {background-image: url('../images/mainbg3.jpg');}
+	100% {background-image: url('../images/mainbg1.jpg');}
+	
+}
+
+.image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height :100vh;
+	width: 100%;
+	min-height: 600px;
+	min-width: 1300px;
+
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////TITLE BOXES////////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+#aboutbox {background-color: #7E549F}
+#creatorsbox {background-color: #C1549C}
+#portfoliobox {background-color: #FB836F}
+#clientsbox {background-color: #4097AA}
+#servicesbox {background-color: #FFCB3E}
+#contactbox {background-color: #2D4057}
+
+
+
+.left {
+	float: left;
+	margin: 0 0 0 30px;
+	text-align: left;
+}
+
+.right {
+	float: right;
+	margin: 0 30px 0 0;
+	text-align: right;
+}
+
+.box { 
+	position: sticky;
+	top: 0;
+	width: 200px;
+	height: 250px;
+	border-radius: 0px 0px 5px 5px;
+}
+
+
+
+.name {
+	
+	line-height: 1.25em;
+	color: white;
+	font-size: 68px;
+	margin: -10px 10px;
+}
+
+#creators .name, #portfolio .name{ 
+
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////ABOUT SECTION//////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+.textup {
+	margin: 0;
+	overflow: auto;
+	color: white;
+}
+#aboutcon1{
+	margin: 100px 0px 0px -150px;
+	font-size: 54px;
+	font-weight: bolder;
+	text-align: center;
+}
+#aboutcon2{
+	margin: 80px 0 0 50px;
+	font-size: 30px;
+}
+#aboutcon3{
+	margin: 50px 0 0 50px;
+	font-size: 30px;
+}
+
+.content {
+	text-align: justify;
+	text-justify: inter-word;
+	width: 800px;
+}
+
+
+.vertical {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.horizontal::after {
+  content: "";
+  clear: both;
+  display: inline-table;
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////CREATOR SECTION////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+.creator-row {
+	position: relative;
+	
+}
+
+#creator-top {
+	position: relative;
+	text-align: center;
+	margin: 100px 0 0 100px;
+}
+
+h3 {
+	font-size: 48px;
+	color: white;
+}
+
+#creator-bottom {
+	position: relative;
+	
+}
+
+.member {
+	position: relative;
+	left: 10%;
+	margin: 0px 100px;
+	display: inline-block;
+	height: 400px;
+	transition: all 0.4s ease;
+}
+
+.member img {
+	height: 400px;
+	
+	
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+    height: 0%;
+	width: 100%;
+	transition: all 0.4s ease;
+}
+
+.member:hover .overlay {
+	height: 100%;
+	background-color: pink;
+	opacity: 0.4;
+	
+}
+
+
+.mem-desc {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 0;
+    opacity: 0;
+	transition: all .4s ease-in-out;
+	
+}
+
+.mem-desc p {
+	font-size: 44px;
+	font-weight: 900;
+	color: black;
+}
+
+.member:hover .mem-desc{
+	margin-bottom: 20px;
+    opacity: 1;
+	
+	
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////PORTFOLIO SECTION//////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+
+	
+#portfolio-contents {
+	position: relative;
+	top: 100px;
+	left: -10px;
+	text-align: center;
+    
+
+}
+#portfolio-top {
+	margin-bottom: 40px;
+}
+
+.portfolio-number {
+	display: inline-block;
+}
+
+.page-number{
+	color: white;
+	font-size: 48px;
+	margin: 0 20px;
+	transition: all 0.2s;
+}
+
+.page-number:hover{
+	color: gray;
+	cursor: pointer;
+	
+}
+
+.active-number {
+	color: gray;
+}
+
+#portfolio-bottom 
+{
+	position: absolute;
+	left: 300px;
+}
+
+.portfolio-pictures, .port-pics {
+	height: 0px;
+	transition: all 0.2s;
+	border-radius: 5px;
+}
+
+.port-row {
+	width: 1000px;
+}
+
+.port-pics:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.slots {
+	margin: 5px;
+	/*width: 300px;*/
+	display: inline-block;
+}
+
+.active-pics {
+	width: 900px;
+}
+
+.active-pics .port-row .slots .port-pics{
+	height: 200px;
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////CLIENTS SECTION////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+#clients-contents {
+	position: relative;
+}
+#clients-pictures {
+	
+	position: absolute;
+	top: 150px;
+	left: 70px;
+	
+}
+
+.clients-pics
+{
+	height: 160px;
+	margin: 20px;
+	
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////SERVICES SECTION///////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+.servicerow {
+	position: relative;
+	top: 100px;
+	left: -50px;
+	text-align: center;
+}
+
+.logobox {
+	display: inline-block;
+	width: 350px;
+	height: 350px;
+	border: 1px solid white;	
+	margin: 50px;
+	
+}
+
+.logobox img {
+	width: 50px;
+	height: 50px;
+	margin-top: 20px;
+}
+.logobox-text {
+	width: 80%;
+	position: relative;
+	left: 10%;
+	height: 200px;
+	padding: 0px 0px;
+	box-sizing: border-box;
+	font-size: 26px;
+	text-align: center;
+	color: white;
+	letter-spacing: 1px;
+}
+.logobox-text h4 {
+	margin: 10pxx 0 40px 0;
+}
+
+.logobox-text p {
+	font-size: 18px;
+	text-align: justify;
+  	text-align-last: center;
+}
+
+/*/////////////////////////////////////////////////////////////////////
+////////////////////////CONTACT SECTION////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+#contacts-contents {
+	position: relative;
+	top: 100px;
+}
+
+#column-left {
+	position: relative;
+	left: 100px;
+	display: inline-block;
+	width: 500px;
+
+}
+
+.input-box{
+	padding: 20px 30px;
+	width: 450px;
+	margin: 15px;
+	border: 2px solid pink;
+	border-radius: 5px;
+	transition: all 0.2s ease;
+	font-size: 16px;
+}
+
+.input-box:focus {
+
+	border: 2px solid darkred;
+	background-color: #222222;
+	color: white;
+	
+}
+
+.input-box::placeholder {
+	font-weight: 700;
+	color: hotpink;
+	letter-spacing: 1px;
+	
+	
+}
+
+#text-message {
+	height: 150px;
+	resize: none;
+	font-size: 20px;	
+}
+
+#send{
+	margin: 10px 15px;
+	padding: 20px 30px;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	background-color: hotpink;
+	border: 1px solid hotpink;
+	border-radius: 5px;
+	transition: all 0.2s ease;
+}
+
+#send:hover {
+	
+	background-color: mediumvioletred;
+	border: 1px solid mediumvioletred;
+	
+}
+
+
+#column-right {
+	display: inline-block;
+	position: absolute;
+	left: 700px;
+	color: pink;
+	font-size: 32px;
+}
+
+
+
+
+
